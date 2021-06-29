@@ -16,6 +16,7 @@ public class Book {
 
         Methods.editContact();
 
+        Methods.deleteContact();
 
     }
 

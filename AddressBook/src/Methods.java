@@ -4,6 +4,7 @@ import java.util.Scanner;
 public class Methods {
     static HashMap<String, People> list = new HashMap<String, People>();
 
+
     public static People getAddContact() {
 
         Scanner sc = new Scanner(System.in);
@@ -105,6 +106,20 @@ public class Methods {
                             System.out.println("please select valid option");
                             break;
                     }
+
+    }
+
+    public static void deleteContact(){
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter E-mail Id: ");
+        String EMail = sc.nextLine();
+
+        if(list.containsKey(EMail)) {
+            System.out.println("E-Mail Found! ");
+            deleteContact();
+        }
+        list.remove(EMail);
+        System.out.println("E-mail Deleted!");
 
     }
 
